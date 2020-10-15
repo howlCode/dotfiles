@@ -26,7 +26,6 @@ alias gpl="git pull"
 alias gprune='git remote update origin --prune'
 
 alias vim='nvim'
-alias doom='exec ~/Games/zdl'
 alias media='cd /mnt/media'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

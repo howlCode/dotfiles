@@ -3,8 +3,7 @@ let mapleader=","
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
-Plug 'chriskempson/base16-vim'
-Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Plug 'ghifarit53/tokyonight-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'kien/ctrlp.vim'
 Plug 'mileszs/ack.vim'
@@ -45,7 +44,6 @@ set noautochdir
 set shell=/bin/zsh
 
 "" Whitespace / Indentation
-"" set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set listchars=tab:▸\ ,eol:¬,trail:·
 set lcs+=space:· " show dot for whitespaces
 set list
@@ -67,7 +65,6 @@ set backupdir=/tmp/editor
 " Clear filetype flags before changing runtimepath to force Vim to reload them.
 filetype off
 
-"set tags=./tags
 set complete-=i
 
 let g:vim_markdown_folding_disabled=1
@@ -102,10 +99,12 @@ let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
 
 syntax enable
 syntax on
-colorscheme Tomorrow-Night-Eighties
+set termguicolors
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+colorscheme tokyonight
 set conceallevel=0
 
 set lazyredraw
 set colorcolumn=111
-"set synmaxcol=110
 syntax sync minlines=256

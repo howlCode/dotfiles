@@ -2,7 +2,7 @@ export ZSH="/home/howlcode/.oh-my-zsh"
 ZSH_THEME="agnoster"
 DISABLE_UPDATE_PROMPT="true"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git rails rbenv ruby)
+plugins=(git rust node npm colored-man-pages)
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
@@ -12,9 +12,6 @@ source $ZSH/oh-my-zsh.sh
    export EDITOR='nano'
  fi
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="$(yarn global bin):$PATH"
 
 alias gs="git status"
